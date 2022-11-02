@@ -2,6 +2,7 @@ package com.diego.todolist.service;
 
 import com.diego.todolist.model.Task;
 import com.diego.todolist.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,10 +12,10 @@ import java.util.List;
 import java.util.Objects;
 
 @Service
-@RequiredArgsConstructor
+@AllArgsConstructor
 public class TaskService {
 
-    @Autowired
+
     private TaskRepository taskRepository;
 
     public Task createdTask(Task task){
